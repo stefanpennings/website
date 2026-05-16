@@ -73,3 +73,19 @@ All colours and section backgrounds are CSS custom properties in `:root` inside 
 ### Assets
 
 `images/stefan.jpg` — profile photo used in the About section of `index.html`.
+
+## Deployment
+
+- **GitHub repo:** `https://github.com/stefanpennings/website.git` (public, branch: `main`)
+- **Hosting:** Vercel — connected to the GitHub repo, auto-deploys on every push to `main`
+- **Git identity:** configured globally as Stefan Pennings / sja.pennings@gmail.com
+
+To deploy any change: `git add . && git commit -m "message" && git push` — Vercel picks it up automatically within ~30 seconds.
+
+## Password gate
+
+`password.html` is the entry point for visitors. Password is **test** (temporary, for preview sharing).
+
+- Correct password sets `sessionStorage` key `auth=1` and redirects to `index.html`
+- Both `index.html` and `ervaringen.html` redirect to `password.html` if `auth` is not set
+- To remove the gate later: delete `password.html` and remove the `<script>` auth check from the `<head>` of both HTML files
