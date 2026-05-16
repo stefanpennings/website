@@ -243,6 +243,8 @@ section{padding:120px 64px;}
 
 /* ── TRAJECTORY ── */
 .trajectory{background:var(--bg-trajectory);}
+.trajectory .btn-primary{background:var(--charcoal);color:var(--off-white);}
+.trajectory .btn-primary:hover{background:var(--gold);color:var(--off-white);}
 .traj-header{
   display:flex;align-items:flex-start;justify-content:space-between;
   gap:40px;margin-bottom:0;
