@@ -203,7 +203,8 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 .testimonials{background:var(--charcoal);padding:100px 64px;}
 .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:48px auto 0;}
 .testi-card{background:rgba(247,244,240,0.04);border:1px solid rgba(168,144,106,0.2);border-radius:4px;padding:36px 32px;}
-.testi-avatar{width:52px;height:52px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:0.82rem;font-weight:600;letter-spacing:0.08em;color:var(--charcoal);margin-bottom:20px;flex-shrink:0;}
+.testi-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;margin-bottom:20px;flex-shrink:0;border:2px solid rgba(168,144,106,0.3);}
+.testi-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 .testi-text{font-family:var(--serif);font-size:1.05rem;line-height:1.75;color:rgba(247,244,240,0.82);font-style:italic;margin-bottom:18px;}
 .testi-name{font-family:var(--sans);font-size:0.62rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
 .nav-right{display:flex;align-items:center;gap:30px;}
