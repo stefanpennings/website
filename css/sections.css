@@ -1,5 +1,5 @@
 /* ── NOT FOR YOU ── */
-.not-for-you{background:var(--forest);padding:100px 64px;text-align:center;}
+.not-for-you{background:var(--charcoal);padding:100px 64px;text-align:center;}
 .nfy-inner{max-width:640px;margin:0 auto;}
 .nfy-title{
   font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);
@@ -20,7 +20,7 @@
   width:12px;height:2px;background:var(--gold);
 }
 .nfy-close{
-  font-family:var(--serif);font-size:1.65rem;font-weight:300;
+  font-family:var(--serif);font-size:1.3rem;font-weight:300;
   font-style:italic;color:var(--off-white);
   margin-top:52px;line-height:1.6;
 }
