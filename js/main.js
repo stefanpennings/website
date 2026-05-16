@@ -45,21 +45,58 @@ function toggleWeek(btn){
   if(!isOpen) item.classList.add('open');
 }
 
+// ── PAIN ROW SCROLL SPY ──
+const painRows = document.querySelectorAll('.pain-row');
+let painActiveIdx = 0;
+let lastPainScrollY = window.scrollY;
+let painSnapTimer = null;
+
+function getPainTargetIdx(){
+  const list = document.querySelector('.pain-list');
+  if(!list) return 0;
+  const rect = list.getBoundingClientRect();
+  const vh = document.documentElement.clientHeight || window.innerHeight;
+  const progress = Math.max(0, Math.min(1, (vh * 0.5 - rect.top) / rect.height));
+  return Math.min(painRows.length - 1, Math.floor(progress * painRows.length));
+}
+
+function applyPainActive(){
+  painRows.forEach((row, i) => row.classList.toggle('active', i === painActiveIdx && row.classList.contains('visible')));
+}
+
+function updateActivePainRow(){
+  const target = getPainTargetIdx();
+  const dy = window.scrollY - lastPainScrollY;
+  lastPainScrollY = window.scrollY;
+  if(dy > 0 && target > painActiveIdx) painActiveIdx = Math.min(painActiveIdx + 1, target);
+  else if(dy < 0 && target < painActiveIdx) painActiveIdx = Math.max(painActiveIdx - 1, target);
+  applyPainActive();
+  clearTimeout(painSnapTimer);
+  painSnapTimer = setTimeout(() => { painActiveIdx = getPainTargetIdx(); applyPainActive(); }, 400);
+}
+
+window.addEventListener('scroll', updateActivePainRow, {passive:true});
+window.addEventListener('resize', () => { lastPainScrollY = window.scrollY; }, {passive:true});
+
 // ── SCROLL ANIMATIONS ──
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
+      const delay = +(entry.target.dataset.delay || 0);
+      const isPainRow = entry.target.classList.contains('pain-row');
       setTimeout(() => {
         entry.target.classList.add('visible');
         entry.target.classList.add('visible-fade');
-      }, +(entry.target.dataset.delay || 0));
+        if(isPainRow) updateActivePainRow();
+      }, delay);
       io.unobserve(entry.target);
     }
   });
 }, {threshold: 0.08});
 
 document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
-document.querySelectorAll('.pain-row').forEach((el,i) => { el.dataset.delay = i*80; io.observe(el); });
+const painStagger = window.innerWidth < 768 ? 55 : 100;
+document.querySelectorAll('.pain-row').forEach((el,i) => { el.dataset.delay = i*painStagger; io.observe(el); });
 document.querySelectorAll('.result-card').forEach((el,i) => { el.dataset.delay = i*90; io.observe(el); });
 document.querySelectorAll('.week-item').forEach((el,i) => { el.dataset.delay = i*60; io.observe(el); });
 document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = i*80; io.observe(el); });
