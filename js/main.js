@@ -29,7 +29,7 @@ function showMain(){
 function showContact(){
   document.getElementById('main-page').style.display='none';
   document.getElementById('contact-page').style.display='block';
-  nav.classList.add('scrolled');
+  nav.classList.remove('scrolled');
   window.scrollTo(0,0);
 }
 
