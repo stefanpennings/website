@@ -230,6 +230,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .photo-notes{padding:48px 32px;}
 }
 @media(max-width:768px){
+  .about{padding-left:24px;padding-right:24px;}
   .about-quote{font-size:1.55rem !important;line-height:1.35;}
   .about-sig{font-size:0.88rem !important;}
   nav{padding:12px 20px;flex-wrap:nowrap;gap:12px;align-items:center;}
