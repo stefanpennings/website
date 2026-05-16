@@ -76,6 +76,9 @@ nav.scrolled .nav-link:hover{color:var(--charcoal);}
 nav.scrolled .nav-cta{background:var(--charcoal);color:var(--off-white);}
 nav.scrolled .nav-cta:hover{background:var(--gold);}
 
+/* ── SECTION CTA ── */
+.section-cta{text-align:center;margin-top:48px;}
+
 /* ── BUTTONS ── */
 .btn-primary{
   display:inline-block;font-family:var(--sans);font-size:0.7rem;font-weight:500;
