@@ -173,6 +173,7 @@
 /* ── FOOTER ── */
 footer{background:var(--dark-brown);padding:40px 64px;display:flex;justify-content:space-between;align-items:center;gap:32px;}
 .footer-left{display:flex;flex-direction:column;gap:6px;}
+.footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:14px;}
 .footer-logo{font-family:var(--serif);font-size:0.95rem;color:var(--warm-beige);letter-spacing:0.1em;}
 .footer-copy{font-family:var(--sans);font-size:0.68rem;color:var(--warm-grey);letter-spacing:0.06em;}
 .footer-legal{font-family:var(--sans);font-size:0.62rem;color:rgba(138,130,120,0.6);letter-spacing:0.06em;}
@@ -226,6 +227,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .about-img-frame{max-width:280px;margin:0 auto;}
   footer{padding:32px;flex-direction:column;text-align:center;}
   .footer-left{align-items:center;}
+  .footer-right{align-items:center;}
   .footer-social{justify-content:center;}
   .contact-form-wrap{padding:60px 28px;}
   .wa-top-bar{padding:76px 32px 22px;}
