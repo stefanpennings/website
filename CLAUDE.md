@@ -1,20 +1,8 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Development
 
-No build tools or package manager. Open files directly in a browser to preview:
-
-```
-# Windows — open main page
-start index.html
-
-# or open ervaringen page
-start ervaringen.html
-```
-
-There are no tests, no linting, and no compilation step.
+No build tools or package manager. Preview by opening files directly in a browser (`start index.html`). No tests, linting, or compilation.
 
 ## File size rule
 
@@ -78,8 +66,6 @@ All colours and section backgrounds are CSS custom properties in `:root` inside 
 
 - **GitHub repo:** `https://github.com/stefanpennings/website.git` (public, branch: `main`)
 - **Hosting:** Vercel — connected to the GitHub repo, auto-deploys on every push to `main`
-- **Git identity:** configured globally as Stefan Pennings / sja.pennings@gmail.com
-
 To deploy any change: `git add . && git commit -m "message" && git push` — Vercel picks it up automatically within ~30 seconds.
 
 ## Password gate
