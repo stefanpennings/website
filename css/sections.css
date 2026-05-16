@@ -245,8 +245,8 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .hero .btn-primary{display:block;width:100%;box-sizing:border-box;text-align:center;padding:16px 16px;letter-spacing:0.1em;}
   .hero-link-soft{text-align:center;}
   .hero h1{font-size:clamp(1.9rem,7.5vw,2.6rem);line-height:1.1;margin-bottom:20px;}
-  .hero-sub{font-size:0.98rem;line-height:1.8;max-width:100%;margin-bottom:20px;}
-  .hero-promise{font-size:1.1rem;line-height:1.65;margin-bottom:20px;}
+  .hero-sub{font-size:1.1rem;line-height:1.85;max-width:100%;margin-bottom:20px;}
+  .hero-promise{font-size:1.25rem;line-height:1.65;margin-bottom:20px;}
   .testi-grid{grid-template-columns:1fr;}.testimonials{padding:60px 24px;}
 }
 @media(max-width:680px){
