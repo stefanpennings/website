@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ervaringen — Het Doorbraak Traject</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --off-white:#F7F4F0;
+  --cream:#EDE8DF;
+  --warm-beige:#D9D0C0;
+  --warm-grey:#8A8278;
+  --dark-brown:#2A2420;
+  --forest:#2C3B2E;
+  --charcoal:#1A1A18;
+  --gold:#A8906A;
+  --gold-light:#C4A882;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',sans-serif;
+  --bg-hero:#1A1A18;
+  --bg-problem:#1A1A18;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--off-white);color:var(--charcoal);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:26px 64px;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:background 0.5s,padding 0.4s,box-shadow 0.4s;
+}
+nav.scrolled{
+  background:rgba(247,244,240,0.96);
+  backdrop-filter:blur(16px);
+  padding:16px 64px;
+  box-shadow:0 1px 0 rgba(168,144,106,0.12);
+}
+.nav-logo{
+  font-family:var(--serif);font-size:1rem;font-weight:400;
+  letter-spacing:0.14em;color:var(--off-white);text-decoration:none;
+  transition:color 0.4s;white-space:nowrap;
+}
+nav.scrolled .nav-logo{color:var(--charcoal);}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-link{
+  font-family:var(--sans);font-size:0.67rem;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(247,244,240,0.78);background:none;border:none;padding:0;
+  transition:color 0.3s;cursor:pointer;text-decoration:none;
+}
+.nav-link:hover{color:var(--off-white);}
+.nav-link.active{color:var(--gold);}
+nav.scrolled .nav-link{color:var(--warm-grey);}
+nav.scrolled .nav-link:hover{color:var(--charcoal);}
+nav.scrolled .nav-link.active{color:var(--gold);}
+.nav-cta{
+  font-family:var(--sans);font-size:0.65rem;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--charcoal);background:var(--off-white);
+  padding:12px 24px;cursor:pointer;border:none;
+  transition:background 0.3s,color 0.3s,transform 0.2s;white-space:nowrap;
+  text-decoration:none;display:inline-block;
+}
+.nav-cta:hover{background:var(--gold);color:var(--off-white);transform:translateY(-1px);}
+nav.scrolled .nav-cta{background:var(--charcoal);color:var(--off-white);}
+nav.scrolled .nav-cta:hover{background:var(--gold);}
+
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--off-white);border-radius:1px;transition:transform 0.3s,opacity 0.3s,background 0.4s;}
+nav.scrolled .hamburger span{background:var(--charcoal);}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-right{display:flex;align-items:center;gap:30px;}
+
+/* ── MOBILE MENU ── */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,26,24,0.98);z-index:190;display:flex;flex-direction:column;justify-content:center;padding:0 40px;transform:translateY(-100%);transition:transform 0.38s cubic-bezier(0.4,0,0.2,1);pointer-events:none;}
+.mobile-menu.open{transform:translateY(0);pointer-events:all;}
+.mobile-menu-link{font-family:var(--sans);font-size:1.1rem;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,240,0.78);background:none;border:none;border-bottom:1px solid rgba(168,144,106,0.15);padding:24px 0;cursor:pointer;text-align:left;text-decoration:none;display:block;transition:color 0.25s,padding-left 0.25s;}
+.mobile-menu-link:hover{color:var(--gold);padding-left:8px;}
+.mobile-menu-link.active{color:var(--gold);}
+
+/* ── PAGE HERO ── */
+.page-hero{
+  background:var(--bg-hero);
+  padding:160px 64px 100px;
+  text-align:center;
+}
+.page-hero .s-label{
+  font-family:var(--sans);font-size:0.63rem;font-weight:500;
+  letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:28px;display:block;
+}
+.page-hero h1{
+  font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.2rem);
+  font-weight:300;line-height:1.1;color:var(--off-white);
+  margin-bottom:24px;letter-spacing:-0.01em;
+}
+.page-hero h1 em{font-style:italic;}
+.page-hero p{
+  font-family:var(--sans);font-size:1rem;font-weight:300;
+  color:rgba(247,244,240,0.7);max-width:540px;margin:0 auto;line-height:1.8;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials-page{background:var(--off-white);padding:100px 64px;}
+.testi-grid-full{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:32px;
+  margin-top:56px;
+  max-width:1100px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.testi-card{background:#fff;border:1px solid rgba(168,144,106,0.18);padding:44px 40px;transition:box-shadow 0.3s,border-color 0.3s;}
+.testi-card:hover{box-shadow:0 8px 40px rgba(168,144,106,0.12);border-color:rgba(168,144,106,0.4);}
+.testi-quote{font-family:var(--serif);font-size:3rem;color:var(--gold);line-height:0.8;display:block;margin-bottom:20px;}
+.testi-text{font-family:var(--sans);font-size:0.9rem;font-weight:300;line-height:1.9;color:#3A3830;margin-bottom:32px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:16px;}
+.testi-avatar{width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:0.75rem;font-weight:500;color:var(--off-white);letter-spacing:0.04em;flex-shrink:0;}
+.testi-name{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);}
+
+/* ── CTA SECTIE ── */
+.testi-cta{background:var(--charcoal);padding:80px 64px;text-align:center;}
+.testi-cta h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--off-white);margin-bottom:16px;}
+.testi-cta p{font-family:var(--sans);font-size:0.9rem;font-weight:300;color:rgba(247,244,240,0.7);margin-bottom:40px;}
+.btn-primary{
+  display:inline-block;font-family:var(--sans);font-size:0.7rem;font-weight:500;
+  letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;
+  color:var(--charcoal);background:var(--off-white);padding:18px 44px;
+  transition:background 0.3s,color 0.3s,transform 0.25s;
+}
+.btn-primary:hover{background:var(--gold);color:var(--off-white);transform:translateY(-2px);}
+
+/* ── FOOTER ── */
+footer{background:var(--dark-brown);padding:40px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-logo{font-family:var(--serif);font-size:0.95rem;color:var(--warm-beige);letter-spacing:0.1em;}
+.footer-copy{font-family:var(--sans);font-size:0.68rem;color:var(--warm-grey);letter-spacing:0.06em;}
+.footer-social{display:flex;gap:14px;}
+.footer-social a{width:34px;height:34px;border:1px solid rgba(217,208,193,0.2);display:flex;align-items:center;justify-content:center;color:var(--warm-beige);text-decoration:none;transition:border-color 0.3s,color 0.3s;}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold);}
+.footer-social svg{width:14px;height:14px;fill:currentColor;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  nav{padding:20px 32px;}
+  nav.scrolled{padding:14px 32px;}
+  .page-hero{padding:140px 32px 80px;}
+  .testimonials-page{padding:80px 32px;}
+  .testi-cta{padding:60px 32px;}
+  footer{padding:32px;flex-direction:column;text-align:center;}
+  .footer-social{justify-content:center;}
+}
+@media(min-width:769px){.hamburger{display:none;}.nav-links{display:flex;}}
+@media(max-width:768px){
+  nav{padding:12px 20px;flex-wrap:nowrap;gap:12px;align-items:center;}
+  .hamburger{display:flex;}
+  .nav-logo{flex:1;text-align:center;}
+  .nav-links{display:none;}
+  .nav-cta{margin-left:0;font-size:0.56rem;padding:8px 12px;letter-spacing:0.1em;}
+  .page-hero{padding:120px 20px 60px;}
+  .page-hero h1{font-size:2.2rem;}
+  .testi-grid-full{grid-template-columns:1fr;gap:20px;}
+  .testi-card{padding:32px 24px;}
+  .testimonials-page{padding:60px 20px;}
+  .testi-cta{padding:60px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/31628702297?text=Hallo%20Stefan%2C%20ik%20ben%20ge%C3%AFnteresseerd%20in%20het%20Doorbraak%20Traject." class="wa-float" target="_blank" aria-label="WhatsApp Stefan" style="position:fixed;bottom:32px;right:32px;z-index:500;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.38);text-decoration:none;">
+  <svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a href="index.html.html" class="nav-logo">Stefan Pennings</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a class="nav-link" href="index.html.html#over-mij">Over mij</a>
+      <a class="nav-link active" href="ervaringen.html">Ervaringen</a>
+      <a class="nav-link" href="index.html.html#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Kennismakingsgesprek</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a class="mobile-menu-link" href="index.html.html#over-mij">Over mij</a>
+  <a class="mobile-menu-link active" href="ervaringen.html">Ervaringen</a>
+  <a class="mobile-menu-link" href="index.html.html#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <span class="s-label">Het Doorbraak Traject</span>
+  <h1>Wat anderen<br><em>zeggen.</em></h1>
+  <p>Echte verhalen van mensen die de stap hebben gezet en ontdekten wat er mogelijk is als je stopt met wachten.</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-page">
+  <div class="testi-grid-full">
+
+    <div class="testi-card">
+      <span class="testi-quote">&ldquo;</span>
+      <p class="testi-text">Na jaren twijfelen over mijn carrière wist ik eindelijk wat ik echt wilde. Stefan helpt je niet met adviezen maar met de juiste vragen, waardoor de antwoorden vanzelf komen. In 6 weken heb ik meer vooruitgang geboekt dan in jaren daarvoor.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">ER</div>
+        <span class="testi-name">Eva R.</span>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-quote">&ldquo;</span>
+      <p class="testi-text">Ik was sceptisch of coaching iets voor mij zou zijn, maar het traject heeft mijn kijk op werk en leven volledig veranderd. De combinatie van concrete opdrachten en persoonlijk contact maakt het heel praktisch. Ik ben nu met meer energie en richting aan het werk.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">TB</div>
+        <span class="testi-name">Thomas B.</span>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-quote">&ldquo;</span>
+      <p class="testi-text">Het traject heeft me geholpen om eindelijk de keuze te maken die ik al jaren voor me uitschoof. Stefan is direct maar ook heel empathisch &mdash; precies de balans die ik nodig had. Ik zou dit aanraden aan iedereen die vast zit in twijfel.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">LV</div>
+        <span class="testi-name">Laura V.</span>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-quote">&ldquo;</span>
+      <p class="testi-text">Wat ik het meest waardeerde was dat Stefan nooit zei wat ik moest doen, maar me liet zien wat ik al wist. Na 6 weken had ik een concreet actieplan en het vertrouwen om het uit te voeren. Dit is de beste investering die ik in mijzelf heb gedaan.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">MD</div>
+        <span class="testi-name">Mees D.</span>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-quote">&ldquo;</span>
+      <p class="testi-text">Ik begon het traject vol twijfels maar al na de eerste sessie voelde ik dat dit anders was. Stefan stelt de vragen die je echt niet wil vermijden &mdash; en dat is precies wat je nodig hebt. Na 6 weken had ik niet alleen helderheid, maar ook de moed om te handelen.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">NH</div>
+        <span class="testi-name">Noor H.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="testi-cta">
+  <h2>Jouw doorbraak<br><em>begint hier.</em></h2>
+  <p>Plan een vrijblijvend kennismakingsgesprek en ontdek of dit traject bij jou past.</p>
+  <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Stefan Pennings</span>
+  <span class="footer-copy">© 2026 Stefan Pennings — Alle rechten voorbehouden</span>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/stefan-pennings" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:sja.pennings@gmail.com" aria-label="E-mail">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+// -- NAV SCROLL --
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// -- HAMBURGER --
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+});
+</script>
+</body>
+</html>

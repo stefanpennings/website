@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het Doorbraak Traject — Stefan Pennings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+
+<!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/31628702297?text=Hallo%20Stefan%2C%20ik%20ben%20ge%C3%AFnteresseerd%20in%20het%20Doorbraak%20Traject." class="wa-float" target="_blank" aria-label="WhatsApp Stefan">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- -- NAV -- -->
+<nav id="nav">
+  <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a href="#" class="nav-logo" onclick="showMain();return false;">Stefan Pennings</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <button class="nav-link" onclick="showMain();setTimeout(()=>document.getElementById('over-mij').scrollIntoView({behavior:'smooth'}),80);">Over mij</button>
+      <a class="nav-link" href="ervaringen.html">Ervaringen</a>
+      <button class="nav-link" onclick="showContact();">Contact</button>
+    </div>
+    <a class="nav-cta" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Kennismakingsgesprek</a>
+  </div>
+</nav>
+<div class="hamburger-menu" id="hamburgerMenu" aria-hidden="true">
+  <div class="ham-overlay" id="hamOverlay"></div>
+  <div class="ham-panel">
+    <button class="ham-link" onclick="closeHamMenu();showMain();setTimeout(()=>document.getElementById('over-mij').scrollIntoView({behavior:'smooth'}),80);">Over mij</button>
+    <a class="ham-link" href="ervaringen.html">Ervaringen</a>
+    <button class="ham-link" onclick="closeHamMenu();showContact();">Contact</button>
+    <div class="ham-divider"></div>
+    <a class="ham-cta-link" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Vrijblijvend kennismaken? Plan hier je gesprek.</a>
+  </div>
+</div>
+
+
+<!-- ═══════════ MAIN ═══════════ -->
+<div id="main-page">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">6 weken &nbsp;·&nbsp; 1-op-1 &nbsp;·&nbsp; Transformatietraject</span>
+    <h1>Stop met leven op<br>de <em>automatische piloot.</em></h1>
+    <div class="hero-sub">
+      <p>Voor hoogopgeleide professionals die een goed leven hebben op papier, maar diep van binnen voelen: dit klopt niet meer en zich afvragen <em>"Is dit het nou?"</em></p>
+      <br>
+      <p>Je blijft twijfelen, aanpassen en uitstellen terwijl je voelt dat je iets anders wilt.</p>
+    </div>
+    <p class="hero-promise">In 6 weken maak je een heldere keuze en zet je concrete stappen richting een leven dat wél van jou voelt.</p>
+    <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="s-inner">
+    <h2 class="s-title fade-in">Misschien herken je dit:</h2>
+    <div class="divider"></div>
+    <div class="pain-list">
+      <div class="pain-row"><span class="pain-dot"></span><p>Je functioneert. Maar je voelt weinig echte richting of voldoening.</p></div>
+      <div class="pain-row"><span class="pain-dot"></span><p>Je blijft maar twijfelen over je werk, relatie, je leven of je volgende stap.</p></div>
+      <div class="pain-row"><span class="pain-dot"></span><p>Je weet diep van binnen wat je wilt. Maar je durft de keuze niet te maken.</p></div>
+      <div class="pain-row"><span class="pain-dot"></span><p>Je past je aan. Aan verwachtingen. Aan anderen. Aan hoe het hoort.</p></div>
+      <div class="pain-row"><span class="pain-dot"></span><p>Je denkt veel. Maar je komt moeilijk écht in beweging.</p></div>
+      <div class="pain-row"><span class="pain-dot"></span><p>Je bent bang spijt te krijgen als je niets verandert.</p></div>
+    </div>
+    <div class="problem-punch fade-in">
+      <p>Dit is het echte probleem:<br>
+      Niet dat je niet weet wat je wilt.<br>
+      Maar dat je al te lang wegloopt van <em>wat je eigenlijk voelt.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results">
+  <div class="s-inner">
+    <div class="results-header fade-in">
+      <span class="s-label">Na 6 weken</span>
+      <h2 class="s-title">Wat je na 6 weken hebt bereikt</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p>Helderheid over wat jij écht wilt</p>
+      </div>
+      <div class="result-card">
+        <div class="result-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p>Inzicht in de patronen die je al jaren klein houden</p>
+      </div>
+      <div class="result-card">
+        <div class="result-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p>Een concrete beslissing waar je niet meer omheen kunt</p>
+      </div>
+      <div class="result-card">
+        <div class="result-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p>Een persoonlijk 90-dagen actieplan klaar om uit te voeren</p>
+      </div>
+      <div class="result-card">
+        <div class="result-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p>De eerste echte stappen richting een leven dat van jóu is</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAJECTORY -->
+<section class="trajectory">
+  <div class="s-inner">
+    <div class="traj-header fade-in">
+      <div class="traj-left">
+        <span class="s-label">Het programma</span>
+        <h2 class="s-title">Het Doorbraak Traject</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="traj-right">
+        <span class="traj-pill">Van twijfel naar keuze in 6 weken</span>
+        <span class="traj-meta">Intensief &nbsp;·&nbsp; 1-op-1 &nbsp;·&nbsp; Resultaatgericht</span>
+      </div>
+    </div>
+    <div class="weeks">
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 1</span>
+          <span class="week-title-text">Confrontatie &amp; Realiteit</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>Eerlijk kijken naar waar je nu staat en wat je vermijdt. We doorbreken de illusie van 'het gaat wel goed' en leggen de basis voor echte verandering.</p></div>
+      </div>
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 2</span>
+          <span class="week-title-text">Patronen &amp; Overtuigingen</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>De overtuigingen blootleggen die je vasthouden. Waarom doe je wat je doet en wat kost je dat eigenlijk?</p></div>
+      </div>
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 3</span>
+          <span class="week-title-text">Doorbraak &amp; Nieuwe Identiteit</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>Loskomen van oude verhalen en nieuw gedrag ontwikkelen. Wie ben jij als je stopt met aanpassen?</p></div>
+      </div>
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 4</span>
+          <span class="week-title-text">De Keuze</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>De beslissing die je al te lang uitstelt eindelijk maken. De knoop doorhakken. Kiezen voor jezelf, zonder schuldgevoel.</p></div>
+      </div>
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 5</span>
+          <span class="week-title-text">Van Keuze naar Actie</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>Een concreet 90-dagen plan maken. Van inzicht naar uitvoering. Stap voor stap.</p></div>
+      </div>
+      <div class="week-item">
+        <button class="week-trigger" onclick="toggleWeek(this)">
+          <span class="week-label">Week 6</span>
+          <span class="week-title-text">Implementatie &amp; Identiteit</span>
+          <span class="week-arrow"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="week-body"><p>Voorkomen dat je terugvalt in oude patronen. Je nieuwe identiteit verankeren voor de lange termijn.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICAL -->
+<section class="practical">
+  <div class="s-inner">
+    <div class="fade-in">
+      <span class="s-label">Wat je krijgt</span>
+      <h2 class="s-title">Dit traject bestaat uit:</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <div class="offer-icon">🎯</div>
+        <div class="offer-title">6 Intensieve Sessies</div>
+        <p class="offer-desc">Wekelijkse 1-op-1 gesprekken van 75 minuten. Persoonlijk en resultaatgericht.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">💬</div>
+        <div class="offer-title">WhatsApp Support</div>
+        <p class="offer-desc">Tussendoor direct contact voor vragen, inzichten of als je even vastloopt.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">✍️</div>
+        <div class="offer-title">Concrete Opdrachten</div>
+        <p class="offer-desc">Gerichte oefeningen en reflecties die je direct in beweging brengen.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🗺️</div>
+        <div class="offer-title">90-Dagen Actieplan</div>
+        <p class="offer-desc">Een persoonlijk stappenplan voor de periode na het traject. Concreet en uitvoerbaar.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🔒</div>
+        <div class="offer-title">Accountability</div>
+        <p class="offer-desc">Intensieve begeleiding zodat je niet terugvalt in oude patronen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials fade-in">
+  <div class="s-inner" style="text-align:center;">
+    <p class="s-label">Ervaringen</p>
+    <div class="divider"></div>
+    <h2 class="s-title" style="color:var(--off-white);">Wat deelnemers zeggen</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card fade-in">
+      <div class="testi-avatar">MK</div>
+      <p class="testi-text">"Voor het traject wist ik wat ik wilde veranderen, maar bleef ik hangen in dezelfde gedachten. Stefan hielp me door mijn eigen patronen heen te kijken en echt stappen te zetten. Na zes weken heb ik eindelijk de sprong gewaagd."</p>
+      <span class="testi-name">Marieke K. &mdash; marketingmanager</span>
+    </div>
+    <div class="testi-card fade-in">
+      <div class="testi-avatar">JV</div>
+      <p class="testi-text">"Ik was sceptisch of zes weken genoeg zou zijn. Maar de combinatie van inzicht en concrete oefeningen maakte het verschil. Ik functioneer nu vanuit keuze, niet vanuit gewoonte &mdash; en dat voelt als een wereld van verschil."</p>
+      <span class="testi-name">Joost V. &mdash; ondernemer</span>
+    </div>
+  </div>
+</section>
+<!-- INVESTMENT -->
+<section class="investment" id="kennismaking">
+  <div class="investment-inner">
+    <span class="s-label">Investering</span>
+    <h2 class="s-title fade-in"><em>Investering</em></h2>
+    <div class="divider" style="margin:28px auto;"></div>
+    <div class="price-block fade-in">
+      <span class="price-tag">Het Doorbraak Traject</span>
+      <div class="price-amount">€1.250</div>
+      <p class="price-note">excl. btw &nbsp;·&nbsp; 6 weken &nbsp;·&nbsp; 1-op-1</p>
+      <p class="price-sub">Voor mensen die voelen dat ze niet langer<br>willen blijven hangen in twijfel.</p>
+      <a class="btn-outline" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="over-mij">
+  <div class="s-inner">
+    <div class="about-layout-grid">
+      <div class="about-image-col fade-in">
+        <div class="about-img-frame">
+          <img src="images/stefan.jpg" alt="Stefan Pennings" loading="lazy">
+        </div>
+      </div>
+      <div class="about-text-col">
+        <span class="s-label">Over mij</span>
+        <h2 class="s-title fade-in">Minder twijfel.<br><em>Meer helderheid.</em></h2>
+        <div class="divider"></div>
+        <p class="about-text">Ik weet hoe het voelt om vast te zitten tussen zekerheid en wat je diep vanbinnen écht wilt.</p>
+        <p class="about-list-text">Om te blijven twijfelen.<br>Te blijven aanpassen.<br>Te voelen dat je niet volledig leeft vanuit jouw potentie.</p>
+        <p class="about-text">De afgelopen jaren heb ik intensief gewerkt aan mijn eigen ontwikkeling en geleerd van verschillende topcoaches op het gebied van mindset, gedrag, identiteit en persoonlijke transformatie.</p>
+        <p class="about-text">Wat ik ontdekte:</p>
+        <p class="about-bold">Échte verandering ontstaat niet door méér nadenken, maar door verantwoordelijkheid te nemen en in actie te komen.</p>
+        <p class="about-text">Die combinatie van mijn persoonlijke reis, het werk als coach practioner in 1-op-1 coaching en mijn jarenlange ervaring als trainer neem ik nu mee om jou te helpen met jouw persoonlijke doorbraak.</p>
+        <p class="about-cta-line">Waar je ook staat dit is jouw moment. Niet het moment van anderen, niet het 'perfecte' moment dat nooit komt. Jouw leven vraagt nu om <strong style="font-style:normal;color:rgba(247,244,240,0.95);font-weight:500;">JOUW</strong> keuze. Durf jouw eigen pad te volgen.</p>
+        <p class="about-quote"><em>"Life isn't a race, it's about your pace!"</em></p>
+        <p class="about-sig">— Stefan —</p>
+      </div>
+    </div><!-- /.about-layout-grid -->
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-inner fade-in">
+    <p class="final-title">Je weet al langer<br>dat er iets moet <em>veranderen.</em></p>
+    <p class="final-sub">De vraag is alleen:<br>Hoe lang blijf je nog wachten?</p>
+    <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+  </div>
+</section>
+
+</div><!-- /#main-page -->
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<div id="contact-page">
+  <div class="wa-top-bar">
+    <p>Direct contact? Stuur een WhatsApp bericht.</p>
+    <a href="https://wa.me/31628702297?text=Hallo%20Stefan%2C%20ik%20ben%20ge%C3%AFnteresseerd%20in%20het%20Doorbraak%20Traject." class="wa-btn" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Stefan
+    </a>
+  </div>
+  <div class="contact-hero">
+    <span class="s-label" style="text-align:center;display:block;">Contact</span>
+    <h2 class="s-title">Laten we <em>kennismaken</em></h2>
+    <div class="divider"></div>
+    <p>Stel een vraag of plan een vrijblijvend gesprek.<br>Ik reageer zo snel mogelijk.</p>
+  </div>
+  <div style="background:var(--off-white);">
+    <div class="contact-form-wrap">
+      <div id="form-success" class="form-success"><span class="success-heading">Dankjewel voor je bericht.</span>Ik neem zo snel mogelijk contact met je op!<br>Groet,<br>Stefan</div>
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="naam">Naam</label>
+          <input class="form-input" type="text" id="naam" name="naam" required placeholder="Jouw naam">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="telefoon">Telefoonnummer</label>
+          <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="Jouw telefoonnummer">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="boodschap">Boodschap</label>
+          <textarea class="form-textarea" id="boodschap" name="boodschap" required placeholder="Wat speelt er voor jou?"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Verstuur bericht</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Stefan Pennings</span>
+  <span class="footer-copy">© 2026 Stefan Pennings — Alle rechten voorbehouden</span>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/stefan-pennings" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:sja.pennings@gmail.com" aria-label="E-mail">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </a>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
