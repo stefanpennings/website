@@ -158,6 +158,16 @@
 .pni-text{font-family:var(--sans);font-size:0.86rem;font-weight:300;color:var(--dark-brown);line-height:1.75;}
 .pni-label{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;display:block;}
 
+/* ── CERT LOGOS ── */
+.cert-logos{margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1);}
+.cert-label{font-family:var(--sans);font-size:0.58rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(247,244,240,0.38);display:block;margin-bottom:14px;}
+.cert-logo-group{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+.cert-logo-pill{background:#fff;border-radius:4px;padding:8px 12px;display:flex;align-items:center;}
+.cert-logo-pill img{height:38px;width:auto;display:block;}
+.footer-certs{display:flex;gap:10px;align-items:center;}
+.footer-cert-pill{background:#fff;border-radius:3px;padding:5px 8px;display:flex;align-items:center;}
+.footer-cert-pill img{height:26px;width:auto;display:block;}
+
 /* ── FOOTER ── */
 footer{background:var(--dark-brown);padding:40px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-logo{font-family:var(--serif);font-size:0.95rem;color:var(--warm-beige);letter-spacing:0.1em;}
