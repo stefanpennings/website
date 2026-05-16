@@ -67,12 +67,28 @@ document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = 
 // ── CONTACT FORM ──
 function handleSubmit(e){
   e.preventDefault();
-  const naam = document.getElementById('naam').value;
-  const tel = document.getElementById('telefoon').value;
-  const msg = document.getElementById('boodschap').value;
-  const sub = encodeURIComponent('Kennismakingsgesprek - Het Doorbraak Traject');
-  const body = encodeURIComponent('Naam: '+naam+'\nTelefoon: '+tel+'\n\nBoodschap:\n'+msg);
-  window.location.href = 'mailto:sja.pennings@gmail.com?subject='+sub+'&body='+body;
-  document.getElementById('contact-form').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Bezig met versturen…';
+  fetch('https://formspree.io/f/xbdbrroa', {
+    method: 'POST',
+    headers: {'Accept': 'application/json'},
+    body: new FormData(form)
+  })
+  .then(res => {
+    if(res.ok){
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Verstuur bericht';
+      alert('Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar sja.pennings@gmail.com');
+    }
+  })
+  .catch(() => {
+    btn.disabled = false;
+    btn.textContent = 'Verstuur bericht';
+    alert('Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar sja.pennings@gmail.com');
+  });
 }
