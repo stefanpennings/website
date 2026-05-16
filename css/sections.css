@@ -222,7 +222,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .hamburger{display:flex;}
   .nav-logo{flex:1;text-align:center;}
   .nav-links{display:none;}
-  .nav-cta{margin-left:0;font-size:0.56rem;padding:8px 12px;letter-spacing:0.1em;}
+  .nav-cta{display:none;}
   .wa-top-bar{padding:60px 20px 20px;}
   .hero{overflow:visible;min-height:100svh;}
   .hero-content{padding:0 20px 56px;max-width:100%;}
