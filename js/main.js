@@ -20,17 +20,19 @@ hamburgerBtn.addEventListener('click',()=>{ hamburgerMenu.classList.contains('op
 hamOverlay.addEventListener('click', closeHamMenu);
 
 // ── PAGE SWITCH ──
-function showMain(){
+function showMain(pushHistory=true){
   document.getElementById('main-page').style.display='block';
   document.getElementById('contact-page').style.display='none';
   window.scrollTo(0,0);
   nav.classList.toggle('scrolled', window.scrollY > 60);
+  if(pushHistory && window.location.pathname !== '/') history.pushState({},'','/');
 }
-function showContact(){
+function showContact(pushHistory=true){
   document.getElementById('main-page').style.display='none';
   document.getElementById('contact-page').style.display='block';
   nav.classList.remove('scrolled');
   window.scrollTo(0,0);
+  if(pushHistory) history.pushState({},'','/contact');
 }
 
 // ── NAV SCROLL ──
@@ -148,3 +150,14 @@ function handleSubmit(e){
     alert('Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar sja.pennings@gmail.com');
   });
 }
+
+// ── PATH ROUTING ──
+(function(){
+  const p = window.location.pathname;
+  if(p === '/contact') showContact(false);
+  else if(p === '/over-mij') setTimeout(()=>{ const el=document.getElementById('over-mij'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 400);
+})();
+window.addEventListener('popstate', ()=>{
+  if(window.location.pathname === '/contact') showContact(false);
+  else showMain(false);
+});
