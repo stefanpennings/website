@@ -37,7 +37,7 @@
       <a class="nav-link" href="ervaringen.html">Ervaringen</a>
       <button class="nav-link" onclick="showContact();">Contact</button>
     </div>
-    <a class="nav-cta" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Kennismakingsgesprek</a>
+    <a class="nav-cta" href="#" onclick="openCalModal();return false;">Kennismakingsgesprek</a>
   </div>
 </nav>
 <div class="hamburger-menu" id="hamburgerMenu" aria-hidden="true">
@@ -47,7 +47,7 @@
     <a class="ham-link" href="ervaringen.html">Ervaringen</a>
     <button class="ham-link" onclick="closeHamMenu();showContact();">Contact</button>
     <div class="ham-divider"></div>
-    <a class="ham-cta-link" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Vrijblijvend kennismaken? Plan hier je gesprek.</a>
+    <a class="ham-cta-link" href="#" onclick="openCalModal();return false;">Vrijblijvend kennismaken? Plan hier je gesprek.</a>
   </div>
 </div>
 
@@ -65,7 +65,7 @@
     </div>
     <p class="hero-promise">In 6 weken maak je een heldere keuze en zet je concrete stappen richting een leven dat wél van jou voelt.</p>
     <div class="hero-cta-group">
-      <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+      <a class="btn-primary" href="#" onclick="openCalModal();return false;">Plan een kennismakingsgesprek</a>
       <a class="hero-link-soft" href="#traject" onclick="document.getElementById('traject').scrollIntoView({behavior:'smooth'});return false;">Lees meer over het traject ↓</a>
     </div>
   </div>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <div class="section-cta fade-in">
-      <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Ik wil helderheid over mijn volgende stap</a>
+      <a class="btn-primary" href="#" onclick="openCalModal();return false;">Ik wil helderheid over mijn volgende stap</a>
     </div>
   </div>
 </section>
@@ -193,7 +193,7 @@
       </div>
     </div>
     <div class="section-cta fade-in">
-      <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Onderzoek of dit traject bij je past</a>
+      <a class="btn-primary" href="#" onclick="openCalModal();return false;">Onderzoek of dit traject bij je past</a>
     </div>
   </div>
 </section>
@@ -267,7 +267,7 @@
       <div class="price-amount">€1.250</div>
       <p class="price-note">excl. btw &nbsp;·&nbsp; 6 weken &nbsp;·&nbsp; 1-op-1</p>
       <p class="price-sub">Voor mensen die voelen dat ze niet langer<br>willen blijven hangen in twijfel.</p>
-      <a class="btn-outline" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+      <a class="btn-outline" href="#" onclick="openCalModal();return false;">Plan een kennismakingsgesprek</a>
     </div>
   </div>
 </section>
@@ -311,7 +311,7 @@
   <div class="final-inner fade-in">
     <p class="final-title">Je weet al langer<br>dat er iets moet <em>veranderen.</em></p>
     <p class="final-sub">De vraag is alleen:<br>Hoe lang blijf je nog wachten?</p>
-    <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Plan een kennismakingsgesprek</a>
+    <a class="btn-primary" href="#" onclick="openCalModal();return false;">Plan een kennismakingsgesprek</a>
   </div>
 </section>
 
@@ -381,5 +381,14 @@
 </footer>
 
   <script src="js/main.js"></script>
+
+<!-- ── CALENDLY MODAL ── -->
+<div id="cal-modal" class="cal-modal" aria-hidden="true" role="dialog" aria-label="Plan een afspraak">
+  <div class="cal-modal-overlay" onclick="closeCalModal()"></div>
+  <div class="cal-modal-box">
+    <button class="cal-modal-close" onclick="closeCalModal()" aria-label="Sluiten">&times;</button>
+    <iframe id="cal-iframe" src="" data-src="https://calendly.com/sja-pennings/30min?hide_gdpr_banner=1" frameborder="0" title="Plan een afspraak"></iframe>
+  </div>
+</div>
 </body>
 </html>

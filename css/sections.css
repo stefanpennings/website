@@ -272,4 +272,40 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .wa-float{bottom:20px;right:20px;width:48px;height:48px;}
 }
 
+/* ── CALENDLY MODAL ── */
+.cal-modal{
+  display:none;position:fixed;inset:0;z-index:800;
+  align-items:center;justify-content:center;
+}
+.cal-modal.open{display:flex;}
+.cal-modal-overlay{
+  position:absolute;inset:0;
+  background:rgba(26,26,24,0.88);
+  backdrop-filter:blur(6px);
+  animation:calFadeIn 0.25s ease;
+}
+.cal-modal-box{
+  position:relative;z-index:1;
+  width:min(780px,94vw);
+  height:min(720px,92vh);
+  background:#fff;
+  box-shadow:0 32px 100px rgba(0,0,0,0.5);
+  animation:calSlideUp 0.3s ease;
+  display:flex;flex-direction:column;
+}
+.cal-modal-close{
+  position:absolute;top:0;right:0;z-index:2;
+  width:44px;height:44px;
+  background:var(--charcoal);color:var(--off-white);
+  border:none;font-size:1.4rem;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;
+}
+.cal-modal-close:hover{background:var(--gold);}
+#cal-iframe{
+  width:100%;flex:1;border:none;display:block;
+}
+@keyframes calFadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes calSlideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
 

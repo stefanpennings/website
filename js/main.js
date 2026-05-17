@@ -101,6 +101,25 @@ document.querySelectorAll('.result-card').forEach((el,i) => { el.dataset.delay =
 document.querySelectorAll('.week-item').forEach((el,i) => { el.dataset.delay = i*60; io.observe(el); });
 document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = i*80; io.observe(el); });
 
+// ── CALENDLY MODAL ──
+function openCalModal(){
+  const modal = document.getElementById('cal-modal');
+  const iframe = document.getElementById('cal-iframe');
+  if(!iframe.src || iframe.src === window.location.href){
+    iframe.src = iframe.dataset.src;
+  }
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeCalModal(){
+  const modal = document.getElementById('cal-modal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeCalModal(); });
+
 // ── CONTACT FORM ──
 function handleSubmit(e){
   e.preventDefault();
