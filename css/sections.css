@@ -288,7 +288,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   position:relative;z-index:1;
   width:min(780px,94vw);
   height:min(720px,92vh);
-  background:#fff;
+  background:#F7F4F0;
   box-shadow:0 32px 100px rgba(0,0,0,0.5);
   animation:calSlideUp 0.3s ease;
   display:flex;flex-direction:column;
