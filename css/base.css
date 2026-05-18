@@ -50,7 +50,7 @@ nav.scrolled{
   box-shadow:0 1px 0 rgba(168,144,106,0.12);
 }
 .nav-logo{
-  font-family:var(--serif);font-size:1.5rem;font-weight:500;
+  font-family:var(--serif);font-size:1.9rem;font-weight:500;
   letter-spacing:0.14em;color:var(--off-white);text-decoration:none;
   transition:color 0.4s;white-space:nowrap;
 }
