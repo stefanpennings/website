@@ -1,10 +1,10 @@
 {
   "redirects": [
     {"source":"/index.html","destination":"/","permanent":true},
-    {"source":"/ervaringen.html","destination":"/ervaringen","permanent":true}
+    {"source":"/ervaringen.html","destination":"/","permanent":true},
+    {"source":"/ervaringen","destination":"/","permanent":false}
   ],
   "rewrites": [
-    {"source":"/ervaringen","destination":"/ervaringen.html"},
     {"source":"/over-mij","destination":"/index.html"},
     {"source":"/contact","destination":"/index.html"}
   ]
