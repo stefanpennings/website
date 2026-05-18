@@ -225,7 +225,6 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .trajectory .s-title{font-size:clamp(1.5rem,7.5vw,2.4rem);white-space:nowrap;}
   .about-layout-grid{grid-template-columns:1fr;gap:48px;}
   .about-img-frame{max-width:280px;margin:0 auto;}
-  .about-img-frame img{transform:scale(1.5);transform-origin:50% 18%;}
   footer{padding:32px;grid-template-columns:1fr;justify-items:center;text-align:center;}
   .footer-left{align-items:center;}
   .footer-right{justify-content:center;padding-right:0;}
