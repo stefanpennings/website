@@ -1,12 +1,8 @@
 /* ── QUOTE BREAK ── */
 .quote-break{
   background:var(--cream);
-  padding:40px 64px;
+  padding:72px 64px;
   text-align:center;
-}
-.about-spacer{
-  background:var(--off-white);
-  height:80px;
 }
 .quote-break-text{
   font-family:var(--serif);font-size:clamp(1.6rem,3.2vw,2.8rem);
