@@ -1,7 +1,7 @@
 /* ── QUOTE BREAK ── */
 .quote-break{
   background:var(--cream);
-  padding:100px 64px;
+  padding:120px 64px 160px;
   text-align:center;
 }
 .quote-break-text{
