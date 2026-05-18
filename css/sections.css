@@ -1,3 +1,28 @@
+/* ── QUOTE BREAK ── */
+.quote-break{
+  background:var(--bg-hero);
+  padding:100px 64px;
+  text-align:center;
+}
+.quote-break-text{
+  font-family:var(--serif);font-size:clamp(1.6rem,3.2vw,2.8rem);
+  font-weight:300;font-style:italic;
+  color:var(--off-white);line-height:1.45;
+  max-width:780px;margin:0 auto;
+  border-left:none;
+  position:relative;
+}
+.quote-break-text::before{
+  content:'';display:block;
+  width:36px;height:1px;background:var(--gold);
+  margin:0 auto 32px;
+}
+.quote-break-text::after{
+  content:'';display:block;
+  width:36px;height:1px;background:var(--gold);
+  margin:32px auto 0;
+}
+
 /* ── ABOUT ── */
 .about{background:var(--bg-about);padding:120px 64px;}
 .about .s-inner{max-width:1080px;margin:0 auto;}
