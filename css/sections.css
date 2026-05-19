@@ -83,12 +83,7 @@
 }
 .price-sub{
   font-family:var(--serif);font-size:1.12rem;font-weight:300;
-  font-style:italic;color:var(--warm-grey);line-height:1.6;margin-bottom:28px;
-}
-.price-urgency{
-  font-family:var(--sans);font-size:0.9rem;font-weight:400;
-  color:var(--gold-light);line-height:1.7;margin-bottom:36px;
-  border-top:1px solid rgba(168,144,106,0.25);padding-top:24px;
+  font-style:italic;color:var(--warm-grey);line-height:1.6;margin-bottom:44px;
 }
 
 /* ── FINAL CTA ── */
