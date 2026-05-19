@@ -116,6 +116,7 @@ section{padding:120px 64px;}
 .hero{
   position:relative;height:100vh;min-height:720px;
   overflow:hidden;
+  display:flex;align-items:flex-end;
   background:linear-gradient(165deg,#1a1f14 0%,#2a2e1e 40%,#1a1a18 100%);
   background-color:var(--bg-hero);
 }
@@ -130,24 +131,11 @@ section{padding:120px 64px;}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
   opacity:0.04;
 }
-.hero-split{
-  display:flex;height:100%;
-}
-.hero-text-col{
-  flex:0 0 55%;display:flex;align-items:flex-end;
-  position:relative;z-index:2;
-}
 .hero-content{
-  padding:0 56px 110px 64px;
+  position:relative;z-index:2;
+  max-width:860px;padding:0 64px 110px;
   opacity:0;transform:translateY(32px);
   animation:fadeUp 1.2s 0.4s ease forwards;
-}
-.hero-photo-col{
-  flex:0 0 45%;position:relative;overflow:hidden;
-}
-.hero-photo-col img{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:top center;
 }
 @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
 .hero-eyebrow{
