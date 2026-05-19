@@ -33,6 +33,7 @@ function showContact(pushHistory=true){
   nav.classList.remove('scrolled');
   window.scrollTo(0,0);
   if(pushHistory) history.pushState({},'','/contact');
+  if(typeof gtag !== 'undefined') gtag('event', 'contact_pagina_open');
 }
 
 // ── NAV SCROLL ──
@@ -113,6 +114,7 @@ function openCalModal(){
   modal.classList.add('open');
   modal.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden';
+  if(typeof gtag !== 'undefined') gtag('event', 'boek_gesprek_click');
 }
 function closeCalModal(){
   const modal = document.getElementById('cal-modal');
@@ -138,6 +140,7 @@ function handleSubmit(e){
     if(res.ok){
       form.style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
+      if(typeof gtag !== 'undefined') gtag('event', 'formulier_verzonden');
     } else {
       btn.disabled = false;
       btn.textContent = 'Verstuur bericht';
