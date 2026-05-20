@@ -40,6 +40,7 @@
   <a href="#" class="nav-logo" onclick="showMain();return false;">Stefan Pennings</a>
   <div class="nav-right">
     <div class="nav-links">
+      <button class="nav-link" onclick="showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
       <button class="nav-link" onclick="showMain(false);setTimeout(()=>{document.getElementById('over-mij').scrollIntoView({behavior:'smooth'});history.pushState({},'','/over-mij');},80);">Over mij</button>
       <!-- <a class="nav-link" href="/ervaringen">Ervaringen</a> -->
       <button class="nav-link" onclick="showContact();">Contact</button>
@@ -50,6 +51,7 @@
 <div class="hamburger-menu" id="hamburgerMenu" aria-hidden="true">
   <div class="ham-overlay" id="hamOverlay"></div>
   <div class="ham-panel">
+    <button class="ham-link" onclick="closeHamMenu();showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
     <button class="ham-link" onclick="closeHamMenu();showMain(false);setTimeout(()=>{document.getElementById('over-mij').scrollIntoView({behavior:'smooth'});history.pushState({},'','/over-mij');},80);">Over mij</button>
     <!-- <a class="ham-link" href="/ervaringen">Ervaringen</a> -->
     <button class="ham-link" onclick="closeHamMenu();showContact();">Contact</button>
