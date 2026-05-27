@@ -41,7 +41,7 @@
   <div class="nav-right">
     <div class="nav-links">
       <button class="nav-link" onclick="showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
-      <button class="nav-link" onclick="showMain(false);setTimeout(()=>{document.getElementById('over-mij').scrollIntoView({behavior:'smooth'});history.pushState({},'','/over-mij');},80);">Over mij</button>
+      <a class="nav-link" href="/over-mij">Over mij</a>
       <!-- <a class="nav-link" href="/ervaringen">Ervaringen</a> -->
       <button class="nav-link" onclick="showContact();">Contact</button>
     </div>
@@ -52,7 +52,7 @@
   <div class="ham-overlay" id="hamOverlay"></div>
   <div class="ham-panel">
     <button class="ham-link" onclick="closeHamMenu();showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
-    <button class="ham-link" onclick="closeHamMenu();showMain(false);setTimeout(()=>{document.getElementById('over-mij').scrollIntoView({behavior:'smooth'});history.pushState({},'','/over-mij');},80);">Over mij</button>
+    <a class="ham-link" href="/over-mij">Over mij</a>
     <!-- <a class="ham-link" href="/ervaringen">Ervaringen</a> -->
     <button class="ham-link" onclick="closeHamMenu();showContact();">Contact</button>
     <div class="ham-divider"></div>
@@ -302,6 +302,7 @@
         <p class="about-bold">Échte verandering ontstaat niet door méér nadenken, maar door verantwoordelijkheid te nemen en in actie te komen.</p>
         <p class="about-text">Die inzichten, gecombineerd met mijn jarenlange ervaring als trainer en coach, zet ik nu in om jou te helpen jouw doorbraak te maken.</p>
         <p class="about-cta-line">Waar je ook staat dit is jouw moment. Niet het moment van anderen, niet het 'perfecte' moment dat nooit komt. Jouw leven vraagt nu om <strong style="font-style:normal;color:rgba(247,244,240,0.95);font-weight:500;">JOUW</strong> keuze. Durf jouw eigen pad te volgen.</p>
+        <a class="about-read-more" href="/over-mij">Lees meer over mij →</a>
         <p class="about-quote"><em>"Life isn't a race,<br>it's about your pace!"</em></p>
         <p class="about-sig">— Stefan —</p>
         <div class="cert-logos">

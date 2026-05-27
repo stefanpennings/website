@@ -311,3 +311,79 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 @keyframes calSlideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 
 
+/* ── PAGE HERO (over-mij, ervaringen) ── */
+.page-hero{background:var(--bg-hero);padding:160px 64px 80px;text-align:center;}
+.page-hero .s-label{display:block;margin-bottom:28px;}
+.page-hero h1{
+  font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.2rem);
+  font-weight:300;line-height:1.15;color:var(--off-white);
+}
+.page-hero h1 em{font-style:italic;color:var(--gold);}
+
+/* ── STORY PAGE ── */
+.story{background:var(--off-white);padding:80px 64px 120px;}
+.story-inner{max-width:680px;margin:0 auto;}
+.story-p{
+  font-family:var(--sans);font-size:1rem;font-weight:300;
+  color:rgba(26,26,24,0.82);line-height:1.9;margin-bottom:28px;
+}
+.story-pivot{
+  font-family:var(--serif);font-size:1.1rem;font-weight:400;
+  font-style:italic;color:var(--charcoal);line-height:1.65;
+  margin-bottom:28px;padding:18px 0;
+  border-top:1px solid rgba(168,144,106,0.2);
+  border-bottom:1px solid rgba(168,144,106,0.2);
+}
+.story-quote{
+  font-family:var(--serif);font-size:2.4rem;font-style:italic;
+  color:var(--gold);line-height:1.35;margin:52px 0 12px;display:block;
+}
+.story-sig{
+  font-family:var(--sans);font-size:1rem;font-weight:400;
+  letter-spacing:0.22em;color:var(--warm-grey);display:block;margin-bottom:52px;
+}
+.story-divider{border:none;border-top:1px solid rgba(168,144,106,0.18);margin:48px 0;}
+.story-cta{text-align:center;margin-top:16px;}
+.story-cta-q{
+  font-family:var(--serif);font-size:1.5rem;font-weight:300;
+  font-style:italic;color:var(--charcoal);line-height:1.5;
+  margin-bottom:6px;display:block;
+}
+.story-cta-sub{
+  font-family:var(--sans);font-size:0.88rem;font-weight:300;
+  color:var(--warm-grey);margin-bottom:32px;display:block;
+}
+.story-cta-outro{
+  font-family:var(--sans);font-size:0.85rem;font-weight:300;
+  color:var(--warm-grey);margin-top:24px;display:block;letter-spacing:0.04em;
+}
+.story-cert{display:flex;align-items:center;gap:12px;margin-top:64px;}
+.story-cert-label{
+  font-family:var(--sans);font-size:0.6rem;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--warm-grey);
+}
+.story-cert-pill{background:var(--cream);border-radius:3px;padding:5px 10px;display:flex;align-items:center;}
+.story-cert-pill img{height:24px;width:auto;display:block;}
+
+/* ── ABOUT: lees meer link ── */
+.about-read-more{
+  display:inline-block;
+  font-family:var(--sans);font-size:0.68rem;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  margin-top:4px;margin-bottom:36px;
+  transition:color 0.3s;
+}
+.about-read-more:hover{color:var(--gold-light);}
+
+@media(max-width:1024px){
+  .page-hero{padding:140px 32px 64px;}
+  .story{padding:60px 32px 100px;}
+}
+@media(max-width:768px){
+  .page-hero{padding:120px 20px 52px;}
+  .story{padding:48px 20px 80px;}
+  .story-quote{font-size:1.8rem;}
+  .story-cert{flex-wrap:wrap;}
+}
+
