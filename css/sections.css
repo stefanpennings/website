@@ -328,7 +328,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 .page-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;}
 
 /* ── STORY PAGE ── */
-.story{background:var(--bg-about);padding:120px 64px 120px;}
+.story{background:var(--bg-about);padding:120px 64px 72px;}
 .story .s-inner{max-width:1080px;margin:0 auto;}
 .story .s-title{color:var(--off-white);}
 .story .divider{background:var(--gold);}
@@ -356,7 +356,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.4rem);
   font-style:italic;font-weight:300;
   color:var(--gold);line-height:1.35;
-  text-align:left;margin:52px 0 24px;
+  text-align:left;margin:52px 0 0;
 }
 .story-divider{border:none;border-top:1px solid rgba(168,144,106,0.2);margin:48px 0;}
 .story-cta{text-align:center;margin-top:16px;}
