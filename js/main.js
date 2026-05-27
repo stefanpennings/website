@@ -158,7 +158,6 @@ function handleSubmit(e){
 (function(){
   const p = window.location.pathname;
   if(p === '/contact') showContact(false);
-  else if(p === '/over-mij') setTimeout(()=>{ const el=document.getElementById('over-mij'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 400);
 })();
 window.addEventListener('popstate', ()=>{
   if(window.location.pathname === '/contact') showContact(false);
