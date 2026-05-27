@@ -5,6 +5,7 @@
     {"source":"/ervaringen","destination":"/","permanent":false}
   ],
   "rewrites": [
+    {"source":"/over-mij","destination":"/over-mij.html"},
     {"source":"/contact","destination":"/index.html"}
   ]
 }
