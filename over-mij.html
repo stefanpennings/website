@@ -42,9 +42,15 @@
     <a class="nav-cta" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Kennismakingsgesprek</a>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <a class="mobile-menu-link active" href="/over-mij">Over mij</a>
-  <a class="mobile-menu-link" href="/contact">Contact</a>
+<div class="hamburger-menu" id="hamburgerMenu" aria-hidden="true">
+  <div class="ham-overlay" id="hamOverlay"></div>
+  <div class="ham-panel">
+    <a class="ham-link" href="/">Home</a>
+    <a class="ham-link active" href="/over-mij">Over mij</a>
+    <a class="ham-link" href="/contact">Contact</a>
+    <div class="ham-divider"></div>
+    <a class="ham-cta-link" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Vrijblijvend kennismaken? Plan hier je gesprek.</a>
+  </div>
 </div>
 
 <!-- ── STORY ── -->
@@ -140,14 +146,25 @@ window.addEventListener('scroll', () => {
   if(window.scrollY <= 60) nav.classList.add('scrolled');
 });
 
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', String(isOpen));
-  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-});
+const hamburgerBtn = document.getElementById('hamburger');
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const hamOverlay = document.getElementById('hamOverlay');
+function openHamMenu(){
+  hamburgerMenu.classList.add('open');
+  hamburgerMenu.setAttribute('aria-hidden','false');
+  hamburgerBtn.setAttribute('aria-expanded','true');
+  hamburgerBtn.classList.add('is-open');
+  document.body.style.overflow='hidden';
+}
+function closeHamMenu(){
+  hamburgerMenu.classList.remove('open');
+  hamburgerMenu.setAttribute('aria-hidden','true');
+  hamburgerBtn.setAttribute('aria-expanded','false');
+  hamburgerBtn.classList.remove('is-open');
+  document.body.style.overflow='';
+}
+hamburgerBtn.addEventListener('click', () => { hamburgerMenu.classList.contains('open') ? closeHamMenu() : openHamMenu(); });
+hamOverlay.addEventListener('click', closeHamMenu);
 </script>
 </body>
 </html>
