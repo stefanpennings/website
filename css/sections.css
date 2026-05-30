@@ -205,7 +205,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 .ham-cta-link:hover{color:var(--gold-light);}
 
 /* -- TESTIMONIALS -- */
-.testimonials{background:var(--charcoal);padding:100px 64px;}
+.testimonials{background:var(--dark-brown);padding:100px 64px;}
 .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:48px auto 0;}
 .testi-card{background:rgba(247,244,240,0.04);border:1px solid rgba(168,144,106,0.2);border-radius:4px;padding:36px 32px;}
 .testi-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;margin-bottom:20px;flex-shrink:0;border:2px solid rgba(168,144,106,0.3);}
