@@ -88,9 +88,11 @@
   font-style:italic;color:var(--warm-grey);line-height:1.6;margin-bottom:24px;
 }
 .price-spots{
-  font-family:var(--sans);font-size:0.76rem;font-weight:500;
-  letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:32px;
+  display:inline-block;
+  font-family:var(--sans);font-size:0.72rem;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--off-white);background:var(--gold);
+  padding:7px 20px;margin-bottom:36px;
 }
 
 /* ── FINAL CTA ── */
