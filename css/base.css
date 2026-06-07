@@ -324,12 +324,17 @@ section{padding:120px 64px;}
 /* ── PRACTICAL ── */
 .practical{background:var(--bg-practical);}
 .practical .s-title{white-space:nowrap;}
-.practical-promise{
-  font-family:var(--serif);font-size:1.32rem;font-style:italic;font-weight:400;
-  color:var(--charcoal);text-align:center;
-  margin-top:32px;margin-bottom:0;line-height:1.75;
+.practical-promise-sub{
+  font-family:var(--sans);font-size:0.85rem;font-weight:300;
+  color:var(--warm-grey);text-align:center;
+  margin-top:28px;margin-bottom:8px;line-height:1.7;
+  letter-spacing:0.01em;
 }
-.practical-promise-accent{color:var(--gold);}
+.practical-promise{
+  font-family:var(--serif);font-size:1.45rem;font-style:italic;font-weight:400;
+  color:var(--dark-brown);text-align:center;
+  margin-top:0;margin-bottom:0;line-height:1.6;
+}
 
 .offer-grid{
   display:grid;grid-template-columns:repeat(5,1fr);
