@@ -325,10 +325,11 @@ section{padding:120px 64px;}
 .practical{background:var(--bg-practical);}
 .practical .s-title{white-space:nowrap;}
 .practical-promise{
-  font-family:var(--serif);font-size:1.18rem;font-style:italic;font-weight:400;
+  font-family:var(--serif);font-size:1.32rem;font-style:italic;font-weight:400;
   color:var(--charcoal);text-align:center;
-  margin-top:48px;line-height:1.75;
+  margin-top:32px;margin-bottom:0;line-height:1.75;
 }
+.practical-promise-accent{color:var(--gold);}
 
 .offer-grid{
   display:grid;grid-template-columns:repeat(5,1fr);
