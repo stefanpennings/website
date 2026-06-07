@@ -324,6 +324,12 @@ section{padding:120px 64px;}
 /* ── PRACTICAL ── */
 .practical{background:var(--bg-practical);}
 .practical .s-title{white-space:nowrap;}
+.practical-promise{
+  font-family:var(--sans);font-size:1.1rem;font-weight:500;
+  color:var(--dark-brown);text-align:center;
+  margin-top:48px;line-height:1.7;
+}
+
 .offer-grid{
   display:grid;grid-template-columns:repeat(5,1fr);
   gap:16px;margin-top:52px;
