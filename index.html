@@ -42,7 +42,7 @@
     <div class="nav-links">
       <button class="nav-link" onclick="showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
       <a class="nav-link" href="/over-mij">Over mij</a>
-      <!-- <a class="nav-link" href="/ervaringen">Ervaringen</a> -->
+      <a class="nav-link" href="/ervaringen">Ervaringen</a>
       <button class="nav-link" onclick="showContact();">Contact</button>
     </div>
     <a class="nav-cta" href="#" onclick="openCalModal();return false;">Kennismakingsgesprek</a>
@@ -53,7 +53,7 @@
   <div class="ham-panel">
     <button class="ham-link" onclick="closeHamMenu();showMain(false);setTimeout(()=>{document.getElementById('traject').scrollIntoView({behavior:'smooth'});},80);">Het Traject</button>
     <a class="ham-link" href="/over-mij">Over mij</a>
-    <!-- <a class="ham-link" href="/ervaringen">Ervaringen</a> -->
+    <a class="ham-link" href="/ervaringen">Ervaringen</a>
     <button class="ham-link" onclick="closeHamMenu();showContact();">Contact</button>
     <div class="ham-divider"></div>
     <a class="ham-cta-link" href="#" onclick="openCalModal();return false;">Vrijblijvend kennismaken? Plan hier je gesprek.</a>
@@ -251,12 +251,19 @@
     <div class="divider" style="margin:28px auto;"></div>
     <h2 class="s-title" style="color:var(--off-white);">Aan het woord</h2>
   </div>
-  <div class="testi-grid" style="grid-template-columns:1fr;max-width:640px;">
+  <div class="testi-grid">
     <div class="testi-card fade-in">
-      <p class="testi-text">Tijdens de coachingsessies met Stefan heb ik nieuwe inzichten opgedaan waarmee ikzelf echt aan de slag kan. Daarnaast heb ik een aantal methodes geleerd die ik kan inzetten in het dagelijks leven. Stefan gaat daadkrachtig te werk, hij houdt goed voor ogen wat de te bespreken punten en doelen zijn. Wat mij erg aanspreekt is dat hij bruist van de energie en optimistisch is. Hij is geduldig en heeft een directe manier van communiceren, erg fijn.</p>
+      <p class="testi-text">Tijdens de coachingsessies met Stefan heb ik nieuwe inzichten opgedaan waarmee ikzelf echt aan de slag kan. Stefan gaat daadkrachtig te werk (...) Hij is geduldig en heeft een directe manier van communiceren, erg fijn.</p>
       <span class="testi-name">Alexa — Accountmanager</span>
     </div>
+    <div class="testi-card fade-in">
+      <p class="testi-text">Het Doorbraak Traject heeft me geholpen om mijn patronen beter te herkennen en daar bewuster mee om te gaan. Ik heb veel geleerd over mezelf en merkte dat ik daardoor met meer rust en vertrouwen keuzes maak.</p>
+      <span class="testi-name">Daan — Eigenaar/oprichter</span>
+    </div>
   </div>
+  <p style="text-align:center;margin-top:32px;">
+    <a href="/ervaringen" style="color:var(--gold);font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;">Lees meer over de ervaringen</a>
+  </p>
 </section>
 <!-- INVESTMENT -->
 <section class="investment" id="kennismaking">

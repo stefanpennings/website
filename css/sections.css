@@ -225,6 +225,10 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   nav{padding:20px 32px;}nav.scrolled{padding:14px 32px;}
+  .nav-logo{font-size:1.7rem;}
+  .nav-links{gap:18px;}
+  .nav-link{font-size:0.6rem;letter-spacing:0.14em;}
+  .nav-cta{padding:10px 18px;font-size:0.6rem;}
   section{padding:90px 32px;}
   .hero-content{padding:0 32px 80px;}
 
