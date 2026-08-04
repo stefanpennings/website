@@ -324,6 +324,40 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 @keyframes calFadeIn{from{opacity:0;}to{opacity:1;}}
 @keyframes calSlideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 
+/* ── ZELFTEST MODAL ── */
+.zt-modal{
+  display:none;position:fixed;inset:0;z-index:800;
+  align-items:center;justify-content:center;
+}
+.zt-modal.open{display:flex;}
+.zt-modal-overlay{
+  position:absolute;inset:0;
+  background:rgba(26,26,24,0.88);
+  backdrop-filter:blur(6px);
+  animation:calFadeIn 0.25s ease;
+}
+.zt-modal-box{
+  position:relative;z-index:1;
+  width:min(680px,94vw);
+  height:min(760px,92vh);
+  background:var(--charcoal);
+  box-shadow:0 32px 100px rgba(0,0,0,0.5);
+  animation:calSlideUp 0.3s ease;
+  display:flex;flex-direction:column;
+}
+.zt-modal-close{
+  position:absolute;top:0;right:0;z-index:2;
+  width:44px;height:44px;
+  background:var(--charcoal);color:var(--off-white);
+  border:none;font-size:1.4rem;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;
+}
+.zt-modal-close:hover{background:var(--gold);}
+#zt-iframe{
+  width:100%;flex:1;border:none;display:block;
+}
+
 
 /* ── PAGE HERO (over-mij, ervaringen) ── */
 .page-hero{background:var(--bg-about);padding:140px 64px 80px;text-align:center;}

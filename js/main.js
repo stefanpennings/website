@@ -124,6 +124,25 @@ function closeCalModal(){
 }
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeCalModal(); });
 
+// ── ZELFTEST MODAL ──
+function openZelftestModal(){
+  const modal = document.getElementById('zt-modal');
+  const iframe = document.getElementById('zt-iframe');
+  if(!iframe.src || iframe.src === window.location.href){
+    iframe.src = iframe.dataset.src;
+  }
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeZelftestModal(){
+  const modal = document.getElementById('zt-modal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeZelftestModal(); });
+
 // ── CONTACT FORM ──
 function handleSubmit(e){
   e.preventDefault();

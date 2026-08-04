@@ -98,7 +98,7 @@
       Niet dat je niet weet wat je wilt.<br>
       Maar dat je al te lang wegloopt van <em>wat je eigenlijk voelt.</em></p>
     </div>
-    <p class="section-cta fade-in"><a class="btn-outline" href="/zelftest">Benieuwd of je toe bent aan een doorbraak? Doe de test</a></p>
+    <p class="section-cta fade-in"><a class="btn-primary" href="#" onclick="openZelftestModal();return false;">Toe aan een doorbraak? Doe de test!</a></p>
   </div>
 </section>
 
@@ -399,6 +399,15 @@
   <div class="cal-modal-box">
     <button class="cal-modal-close" onclick="closeCalModal()" aria-label="Sluiten">&times;</button>
     <iframe id="cal-iframe" src="" data-src="https://calendly.com/sja-pennings/30min?hide_gdpr_banner=1&primary_color=A8906A&text_color=2A2420&background_color=F7F4F0" frameborder="0" title="Plan een afspraak"></iframe>
+  </div>
+</div>
+
+<!-- ── ZELFTEST MODAL ── -->
+<div id="zt-modal" class="zt-modal" aria-hidden="true" role="dialog" aria-label="Zelftest: ben jij toe aan een doorbraak?">
+  <div class="zt-modal-overlay" onclick="closeZelftestModal()"></div>
+  <div class="zt-modal-box">
+    <button class="zt-modal-close" onclick="closeZelftestModal()" aria-label="Sluiten">&times;</button>
+    <iframe id="zt-iframe" src="" data-src="/zelftest" frameborder="0" title="Zelftest: ben jij toe aan een doorbraak?"></iframe>
   </div>
 </div>
 </body>

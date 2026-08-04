@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben jij toe aan een doorbraak? — Zelftest</title>
+<title>Ben jij toe aan een doorbraak? Zelftest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -134,6 +134,11 @@ const result = document.getElementById('result');
 let current = 0;
 let score = 0;
 
+if (window.self !== window.top) {
+  const backHome = document.querySelector('.back-home');
+  if (backHome) backHome.style.display = 'none';
+}
+
 function updateProgress(){
   progressFill.style.width = ((current)/questions.length*100) + '%';
   progressLabel.textContent = current < questions.length ? `Vraag ${current+1} van ${questions.length}` : 'Klaar';
@@ -168,14 +173,14 @@ function showResult(){
 
   if (score <= 2){
     title.innerHTML = 'Je hebt het <em>redelijk op orde</em>.';
-    text.textContent = 'Op dit moment lijkt er nog geen directe noodzaak om iets te veranderen. Bewaar deze test gerust — mocht het later weer gaan knellen, dan weet je waar je terecht kan.';
+    text.textContent = 'Op dit moment lijkt er nog geen directe noodzaak om iets te veranderen. Bewaar deze test gerust, mocht het later weer gaan knellen, dan weet je waar je terecht kan.';
     cta.textContent = 'Bekijk Het Doorbraak Traject';
     cta.href = '/';
-    cta.target = '_self';
+    cta.target = '_top';
     wa.style.display = 'none';
   } else if (score <= 4){
     title.innerHTML = 'Je voelt de <em>wrijving</em> al langer.';
-    text.textContent = 'Een aantal van deze signalen komt je bekend voor. Dat is vaak het moment waarop mensen nog even wachten — terwijl juist nú de beste tijd is om er iets mee te doen.';
+    text.textContent = 'Een aantal van deze signalen komt je bekend voor. Dat is vaak het moment waarop mensen nog even wachten, terwijl juist nú de beste tijd is om er iets mee te doen.';
     cta.textContent = 'Plan een vrijblijvend gesprek';
     cta.href = 'https://calendly.com/sja-pennings/30min';
     cta.target = '_blank';

@@ -160,6 +160,15 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
 }
 .btn-primary:hover{background:var(--gold);color:var(--off-white);transform:translateY(-2px);}
 
+/* ── ZELFTEST MODAL ── */
+.zt-modal{display:none;position:fixed;inset:0;z-index:800;align-items:center;justify-content:center;}
+.zt-modal.open{display:flex;}
+.zt-modal-overlay{position:absolute;inset:0;background:rgba(26,26,24,0.88);backdrop-filter:blur(6px);}
+.zt-modal-box{position:relative;z-index:1;width:min(680px,94vw);height:min(760px,92vh);background:var(--charcoal);box-shadow:0 32px 100px rgba(0,0,0,0.5);display:flex;flex-direction:column;}
+.zt-modal-close{position:absolute;top:0;right:0;z-index:2;width:44px;height:44px;background:var(--charcoal);color:var(--off-white);border:none;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.zt-modal-close:hover{background:var(--gold);}
+#zt-iframe{width:100%;flex:1;border:none;display:block;}
+
 /* ── FOOTER ── */
 footer{background:var(--dark-brown);padding:40px 64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:32px;}
 .footer-left{display:flex;flex-direction:column;gap:6px;}
@@ -275,7 +284,7 @@ footer{background:var(--dark-brown);padding:40px 64px;display:grid;grid-template
   <h2>Dit was hún verhaal.<br><em>Nu is het tijd voor jouw verhaal!</em></h2>
   <p>Plan een vrijblijvend kennismakingsgesprek en ontdek of dit traject bij jou past.</p>
   <a class="btn-primary" href="https://calendly.com/sja-pennings/30min" target="_blank" rel="noopener noreferrer">Ik ben klaar voor mijn doorbraak!</a>
-  <p style="margin-top:24px;"><a href="/zelftest" style="color:rgba(247,244,240,0.6);font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-decoration:underline;">Nog niet zeker? Doe eerst de zelftest</a></p>
+  <p style="margin-top:24px;"><a href="#" onclick="openZelftestModal();return false;" style="color:rgba(247,244,240,0.6);font-family:var(--sans);font-size:0.78rem;letter-spacing:0.06em;text-decoration:underline;">Toe aan een doorbraak? Doe de test!</a></p>
 </section>
 
 <!-- FOOTER -->
@@ -318,6 +327,34 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', String(isOpen));
   mobileMenu.setAttribute('aria-hidden', String(!isOpen));
 });
+
+// -- ZELFTEST MODAL --
+function openZelftestModal(){
+  const modal = document.getElementById('zt-modal');
+  const iframe = document.getElementById('zt-iframe');
+  if(!iframe.src || iframe.src === window.location.href){
+    iframe.src = iframe.dataset.src;
+  }
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeZelftestModal(){
+  const modal = document.getElementById('zt-modal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeZelftestModal(); });
 </script>
+
+<!-- ── ZELFTEST MODAL ── -->
+<div id="zt-modal" class="zt-modal" aria-hidden="true" role="dialog" aria-label="Zelftest: ben jij toe aan een doorbraak?">
+  <div class="zt-modal-overlay" onclick="closeZelftestModal()"></div>
+  <div class="zt-modal-box">
+    <button class="zt-modal-close" onclick="closeZelftestModal()" aria-label="Sluiten">&times;</button>
+    <iframe id="zt-iframe" src="" data-src="/zelftest" frameborder="0" title="Zelftest: ben jij toe aan een doorbraak?"></iframe>
+  </div>
+</div>
 </body>
 </html>
