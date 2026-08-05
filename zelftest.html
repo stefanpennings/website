@@ -49,8 +49,10 @@ h1 em{font-style:italic;}
   font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
   color:var(--off-white);background:none;border:1px solid rgba(168,144,106,0.5);
   padding:16px 32px;min-width:160px;text-align:center;cursor:pointer;transition:background 0.3s,color 0.3s,border-color 0.3s;
+  -webkit-tap-highlight-color:transparent;
 }
 .q-btn:hover,.q-btn:active,.q-btn.selected{background:var(--gold);color:var(--charcoal);border-color:var(--gold);}
+.q-btn.selected{transition:none;}
 
 /* -- RESULT -- */
 .result{display:none;text-align:center;}
@@ -170,7 +172,7 @@ questions.forEach(q => {
           progressLabel.textContent = 'Klaar';
           showResult();
         }
-      }, 200);
+      }, 300);
     });
   });
 });
