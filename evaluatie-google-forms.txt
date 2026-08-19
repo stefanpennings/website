@@ -1,0 +1,292 @@
+EVALUATIE – HET DOORBRAAK TRAJECT
+Kopieerbaar bouwbestand voor Google Forms
+============================================
+
+TITEL VAN HET FORMULIER
+------------------------
+Evaluatie – Het Doorbraak Traject
+
+BESCHRIJVING (onder de titel)
+------------------------------
+Bedankt!
+
+Allereerst wil ik je bedanken voor jouw openheid, vertrouwen en inzet tijdens Het Doorbraak Traject.
+
+Ik hoop dat dit traject je niet alleen nieuwe inzichten heeft gegeven, maar vooral heeft geholpen om duurzame verandering in beweging te zetten.
+
+Jouw feedback is voor mij ontzettend waardevol. Het helpt mij om mezelf als coach verder te ontwikkelen én Het Doorbraak Traject steeds verder te verbeteren.
+
+Neem daarom gerust de tijd om onderstaande vragen zo eerlijk en uitgebreid mogelijk te beantwoorden.
+
+Na het invullen plannen we een persoonlijk evaluatiegesprek van ongeveer 30 minuten waarin we samen terugblikken op jouw traject en jouw feedback bespreken.
+
+Daarnaast spreken we elkaar over 90 dagen nog één keer tijdens een Doorbraak APK-call (45 minuten). Tijdens deze sessie kijken we hoe het met je gaat, welke stappen je hebt gezet en wat je eventueel nodig hebt om jouw ontwikkeling vast te houden.
+
+Nogmaals bedankt voor jouw vertrouwen!
+Stefan
+
+VOOR JIJ BEGINT: Instellingen
+------------------------------
+- Instellingen (tandwiel) > Reacties > "Reacties in Spreadsheets bewaren" aanzetten -> koppelt automatisch aan een Google Sheet in je Drive.
+- Gebruik "Sectie toevoegen" (icoon met twee horizontale strepen) voor elke genummerde sectie hieronder (1 t/m 8) — dit geeft automatisch paginabreaks.
+
+
+============================================
+SECTIE 1 — Algemene beoordeling
+============================================
+
+Vraag: Welk cijfer geef je Het Doorbraak Traject?
+Type: Lineaire schaal
+Bereik: 0 – 10
+Label links: 0 = zeer slecht
+Label rechts: 10 = uitstekend
+Verplicht: JA
+
+Vraag: Waarom geef je dit cijfer?
+Type: Alinea (lange tekst)
+Verplicht: nee
+
+Vraag: Welk cijfer geef je mij als coach?
+Type: Lineaire schaal
+Bereik: 0 – 10
+Label links: 0 = zeer slecht
+Label rechts: 10 = uitstekend
+Verplicht: JA
+
+Vraag: Waarom geef je dit cijfer?
+Type: Alinea
+Verplicht: nee
+
+
+============================================
+SECTIE 2 — De coachingsessies
+============================================
+
+Vraag: Hoe heb je de coachingsessies over het algemeen ervaren?
+Type: Alinea
+
+Vraag: Was er een sessie die er voor jou echt uitsprong? Waarom?
+Type: Alinea
+
+Vraag: Hoe heb je de wekelijkse frequentie van de sessies ervaren?
+Type: Keuzerondje (multiple choice, één antwoord)
+Opties:
+- Precies goed
+- Liever vaker
+- Liever minder vaak
+
+Vraag: Waarom?
+Type: Alinea
+
+Vraag: Hoe heb je de duur van de sessies ervaren?
+Type: Keuzerondje
+Opties:
+- Te kort
+- Precies goed
+- Te lang
+
+Vraag: Waarom?
+Type: Alinea
+
+Vraag: Was er iets aan de opbouw of inhoud van de sessies dat je zou verbeteren?
+Type: Alinea
+
+
+============================================
+SECTIE 3 — Het werkboek
+============================================
+
+Vraag: Hoe heb je het werkboek gebruikt?
+Type: Keuzerondje
+Opties:
+- Iedere week actief
+- Regelmatig
+- Af en toe
+- Vooral als naslagwerk
+
+Vraag: Welk onderdeel van het werkboek heeft jou het meest geholpen?
+Type: Alinea
+
+Vraag: Was er iets in het werkboek dat onduidelijk, overbodig was, of iets dat je miste?
+Type: Alinea
+
+
+============================================
+SECTIE 4 — Stefan als coach
+============================================
+
+Vraag: Hoe zou je mijn manier van coachen omschrijven?
+Type: Alinea
+
+Vraag: Wanneer voelde jij je het meest gehoord, uitgedaagd of geholpen?
+Type: Alinea
+
+Vraag: Wat waardeerde je het meest aan mijn begeleiding?
+Type: Alinea
+
+Vraag: Heb je suggesties waarmee ik mezelf als coach verder kan ontwikkelen?
+Type: Alinea
+Verplicht: nee
+
+
+============================================
+SECTIE 5 — Jouw persoonlijke groei
+============================================
+
+--- Raster A ---
+Vraag: Begin- en eindmeting — Bij de start van het traject
+Type: Raster (multiple choice grid)
+Rijen:
+- Zelfvertrouwen
+- Rust
+- Helderheid
+- Actiebereidheid
+Kolommen: 1 2 3 4 5 6 7 8 9 10
+Instelling: "Elke rij vereist een antwoord" AAN
+
+--- Raster B ---
+Vraag: Begin- en eindmeting — Nu, aan het einde van het traject
+Type: Raster (multiple choice grid)
+Rijen:
+- Zelfvertrouwen
+- Rust
+- Helderheid
+- Actiebereidheid
+Kolommen: 1 2 3 4 5 6 7 8 9 10
+Instelling: "Elke rij vereist een antwoord" AAN
+
+Vraag: Wat is er concreet veranderd sinds de start van het traject?
+Type: Alinea
+
+Vraag: Welk inzicht of moment heeft voor jou het meeste losgemaakt?
+Type: Alinea
+
+Vraag: Waar merk je deze verandering nu al in je dagelijks leven, werk of relaties?
+Type: Alinea
+
+Vraag: Als je terugkijkt op de afgelopen zes weken: waar ben je het meest trots op?
+Type: Alinea
+
+
+============================================
+SECTIE 6 — Aanbeveling
+============================================
+
+Beschrijving bovenaan deze sectie (plak dit als sectietekst, VOOR de eerste vraag):
+"Tip: als je tijdens het invullen aan iemand denkt voor wie dit traject waardevol zou kunnen zijn — wanneer diegene besluit te starten (naar aanleiding van deze evaluatie of later via jouw aanbeveling), ontvang jij 50% van jouw investering terug als dank voor jouw vertrouwen."
+
+Vraag: Waarom zou je Het Doorbraak Traject aanbevelen aan anderen?
+Type: Alinea
+
+Vraag: Aan wat voor persoon zou jij dit traject aanbevelen?
+Type: Alinea
+
+Vraag: Ken jij iemand voor wie dit traject waardevol zou kunnen zijn?
+Type: Keuzerondje
+Opties:
+- Ja
+- Nee
+VERTAKKING (sectienavigatie):
+- Bij "Ja" -> ga naar sectie "6b. Aanbeveling – contactgegevens"
+- Bij "Nee" -> ga naar sectie "7. Testimonial"
+
+--- SECTIE 6b (alleen zichtbaar bij "Ja") ---
+Beschrijving bovenaan deze sectie (plak dit als sectietekst):
+"Door de naam hieronder te delen bevestig je dat je deze persoon vooraf hebt gevraagd of ik contact mag opnemen."
+
+Vraag: Naam
+Type: Kort antwoord
+
+Vraag: Waarom denk je aan deze persoon?
+Type: Alinea
+
+Vraag: Mag ik contact opnemen met deze persoon?
+Type: Keuzerondje
+Opties:
+- Ja
+- Nee
+Na deze vraag -> ga door naar sectie "7. Testimonial"
+
+
+============================================
+SECTIE 7 — Testimonial
+============================================
+
+Vraag: Zou je in een paar zinnen willen beschrijven hoe jij Het Doorbraak Traject hebt ervaren?
+Type: Alinea
+Beschrijving onder de vraag (plak dit als vraagbeschrijving):
+"Denk hierbij bijvoorbeeld aan:
+- Wat heeft het traject je opgeleverd?
+- Wat vond je van de aanpak en opbouw?
+- Hoe zou je Stefan als coach omschrijven?
+- Waarom zou je het traject aanbevelen aan anderen?
+
+(Met jouw toestemming gebruik ik deze tekst graag als testimonial op mijn website en/of LinkedIn.)
+
+Voorbeeld (3–8 zinnen):
+'Het Doorbraak Traject heeft mij veel meer rust en zelfvertrouwen gegeven. Door de combinatie van de coachsessies en het werkboek kreeg ik inzicht in mijn patronen én leerde ik hier daadwerkelijk naar handelen. Stefan stelt scherpe vragen, luistert goed en weet op een prettige manier te confronteren. Ik voelde mij gehoord, maar werd ook uitgedaagd om eerlijk naar mezelf te kijken. Ik zou dit traject zeker aanbevelen aan iedereen die vastloopt en duurzame verandering wil creëren.'"
+
+Vraag: Naamvermelding
+Type: Keuzerondje
+Opties:
+- Mijn voornaam mag gebruikt worden.
+- Mijn voornaam en functietitel mogen gebruikt worden.
+- Ik ontvang liever een anonieme vermelding.
+
+
+============================================
+SECTIE 8 — Vervolg & Toekomst
+============================================
+
+Vraag: Stel dat je na dit traject behoefte zou hebben aan verdere begeleiding. Welke vorm zou voor jou het meest waardevol zijn?
+Type: Keuzerondje (met "Anders" optie aanzetten)
+Opties:
+- Een losse coachsessie wanneer ik daar behoefte aan heb.
+- Een periodieke APK-/opfrissessie (bijvoorbeeld iedere 3 of 6 maanden).
+- Een vervolgtraject gericht op verdere persoonlijke groei.
+- Een intervisie- of inspiratiebijeenkomst met oud-deelnemers.
+- [vink "Anders" aan onderaan de opties]
+
+Vraag: Welke onderwerpen zou je in een eventueel vervolg graag verder willen ontwikkelen?
+Type: Alinea
+
+Vraag: Zou je het waardevol vinden om onderdeel te zijn van een community met oud-deelnemers van Het Doorbraak Traject?
+Beschrijving onder de vraag:
+"In deze community kun je elkaar inspireren, ervaringen delen, elkaar helpen bij persoonlijke ontwikkeling en deel ik af en toe inspirerende inzichten, oefeningen of content om je bewustzijn verder te vergroten."
+Type: Keuzerondje
+Opties:
+- Ja, daar zou ik graag aan deelnemen.
+- Misschien, ik ontvang graag meer informatie.
+- Nee, daar heb ik geen behoefte aan.
+
+Vraag: Waarom?
+Type: Alinea
+
+Vraag: Stel dat je vooraf had geweten wat dit traject je uiteindelijk zou opleveren. Welke investering zou je Het Doorbraak Traject achteraf waard vinden?
+Type: Keuzerondje
+Opties:
+- Minder dan €500
+- €500 – €750
+- €750 – €1.000
+- €1.000 – €1.250
+- €1.250 – €1.500
+- Meer dan €1.500
+
+Vraag: Waarom?
+Type: Alinea
+
+Vraag: Wat zou voor jou een logische vervolgstap zijn na Het Doorbraak Traject?
+Type: Alinea
+
+Vraag: Tot slot... Als je over één jaar terugkijkt op dit traject, wat hoop je dan dat nog steeds is blijven hangen?
+Type: Alinea
+
+
+============================================
+CHECKLIST NA HET BOUWEN
+============================================
+[ ] Reacties gekoppeld aan Google Sheets
+[ ] Cijfer-vragen (sectie 1) en beide rasters (sectie 5) op "Verplicht" gezet
+[ ] Vertakking bij vraag "Ken jij iemand..." getest: Ja-route toont sectie 6b, Nee-route slaat 6b over
+[ ] "Anders"-optie bij vervolgvorm (sectie 8) actief getest
+[ ] Bevestigingsbericht (Instellingen > Presentatie) ingesteld, bijv.: "Dank je wel voor het invullen! Ik neem binnenkort contact met je op om het evaluatiegesprek in te plannen."
