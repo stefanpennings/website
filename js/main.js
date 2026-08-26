@@ -104,6 +104,33 @@ document.querySelectorAll('.result-card').forEach((el,i) => { el.dataset.delay =
 document.querySelectorAll('.week-item').forEach((el,i) => { el.dataset.delay = i*60; io.observe(el); });
 document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = i*80; io.observe(el); });
 
+// ── TESTIMONIALS CAROUSEL ──
+(function(){
+  const carousel = document.getElementById('testiCarousel');
+  if(!carousel) return;
+  const slides = carousel.querySelectorAll('.testi-slide');
+  const dots = carousel.querySelectorAll('.testi-dot');
+  let active = 0;
+  let timer = null;
+
+  function goTo(index){
+    slides[active].classList.remove('is-active');
+    dots[active].classList.remove('is-active');
+    active = index;
+    slides[active].classList.add('is-active');
+    dots[active].classList.add('is-active');
+  }
+  function next(){ goTo((active + 1) % slides.length); }
+  function startAutoplay(){
+    clearInterval(timer);
+    timer = setInterval(next, 6000);
+  }
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startAutoplay(); });
+  });
+  startAutoplay();
+})();
+
 // ── CALENDLY MODAL ──
 function openCalModal(){
   const modal = document.getElementById('cal-modal');
