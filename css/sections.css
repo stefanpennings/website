@@ -297,6 +297,7 @@ nav.scrolled .hamburger span{background:var(--charcoal);}
   .price-block{padding:48px 24px;}
   .problem-punch{padding:36px 28px;}
   .wa-float{bottom:20px;right:20px;width:48px;height:48px;}
+  .zt-float{left:16px;right:16px;bottom:88px;max-width:none;padding:16px 20px;}
 }
 
 /* ── CALENDLY MODAL ── */

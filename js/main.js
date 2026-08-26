@@ -131,6 +131,34 @@ document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = 
   startAutoplay();
 })();
 
+// ── FLOATING ZELFTEST NUDGE ──
+(function(){
+  const floatEl = document.getElementById('ztFloat');
+  const punch = document.querySelector('.problem-punch');
+  if(!floatEl || !punch) return;
+  let dismissed = sessionStorage.getItem('zt-float-dismissed') === '1';
+
+  window.dismissZtFloat = function(){
+    dismissed = true;
+    sessionStorage.setItem('zt-float-dismissed', '1');
+    floatEl.classList.remove('is-visible');
+    floatEl.setAttribute('aria-hidden','true');
+  };
+
+  if(dismissed) return;
+
+  const punchObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting && !dismissed){
+        floatEl.classList.add('is-visible');
+        floatEl.setAttribute('aria-hidden','false');
+        punchObserver.disconnect();
+      }
+    });
+  }, {threshold: 0.5});
+  punchObserver.observe(punch);
+})();
+
 // ── CALENDLY MODAL ──
 function openCalModal(){
   const modal = document.getElementById('cal-modal');
@@ -161,6 +189,7 @@ function openZelftestModal(){
   modal.classList.add('open');
   modal.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden';
+  dismissZtFloat();
 }
 function closeZelftestModal(){
   const modal = document.getElementById('zt-modal');
