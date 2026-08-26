@@ -136,11 +136,12 @@ document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = 
   const floatEl = document.getElementById('ztFloat');
   const punch = document.querySelector('.problem-punch');
   if(!floatEl || !punch) return;
-  let dismissed = sessionStorage.getItem('zt-float-dismissed') === '1';
+  let dismissed = false;
+  try { dismissed = sessionStorage.getItem('zt-float-dismissed') === '1'; } catch(e) {}
 
   window.dismissZtFloat = function(){
     dismissed = true;
-    sessionStorage.setItem('zt-float-dismissed', '1');
+    try { sessionStorage.setItem('zt-float-dismissed', '1'); } catch(e) {}
     floatEl.classList.remove('is-visible');
     floatEl.setAttribute('aria-hidden','true');
   };
@@ -155,7 +156,7 @@ document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = 
         punchObserver.disconnect();
       }
     });
-  }, {threshold: 0.5});
+  }, {threshold: 0, rootMargin: '0px 0px -20% 0px'});
   punchObserver.observe(punch);
 })();
 
