@@ -136,12 +136,16 @@ document.querySelectorAll('.offer-card').forEach((el,i) => { el.dataset.delay = 
   const floatEl = document.getElementById('ztFloat');
   const punch = document.querySelector('.problem-punch');
   if(!floatEl || !punch) return;
+  const DISMISS_HOURS = 24;
   let dismissed = false;
-  try { dismissed = sessionStorage.getItem('zt-float-dismissed') === '1'; } catch(e) {}
+  try {
+    const dismissedAt = +(localStorage.getItem('zt-float-dismissed-at') || 0);
+    dismissed = dismissedAt > 0 && (Date.now() - dismissedAt) < DISMISS_HOURS * 60 * 60 * 1000;
+  } catch(e) {}
 
   window.dismissZtFloat = function(){
     dismissed = true;
-    try { sessionStorage.setItem('zt-float-dismissed', '1'); } catch(e) {}
+    try { localStorage.setItem('zt-float-dismissed-at', String(Date.now())); } catch(e) {}
     floatEl.classList.remove('is-visible');
     floatEl.setAttribute('aria-hidden','true');
   };
