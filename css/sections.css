@@ -176,9 +176,12 @@
 .cert-logo-group{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
 .cert-logo-pill{background:#fff;border-radius:4px;padding:8px 12px;display:flex;align-items:center;}
 .cert-logo-pill img{height:38px;width:auto;display:block;}
+.cert-text{font-family:var(--sans);font-size:0.8rem;font-weight:400;color:rgba(247,244,240,0.85);line-height:1.5;margin:0;}
+.cert-text-sub{display:block;font-size:0.68rem;font-weight:300;color:rgba(247,244,240,0.5);margin-top:2px;}
 .footer-certs{display:flex;gap:10px;align-items:center;}
 .footer-cert-pill{background:#fff;border-radius:3px;padding:6px 10px;display:flex;align-items:center;}
 .footer-cert-pill img{height:40px;width:auto;display:block;image-rendering:auto;}
+.footer-cert-text{font-family:var(--sans);font-size:0.62rem;color:rgba(138,130,120,0.7);letter-spacing:0.04em;line-height:1.5;text-align:right;}
 
 /* ── FOOTER ── */
 footer{background:var(--dark-brown);padding:40px 64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:32px;}
